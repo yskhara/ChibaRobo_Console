@@ -103,14 +103,14 @@ public class GameOpePanel extends JPanel implements ActionListener, ChangeListen
 		this.setLayout(new GridBagLayout());
 		
 		// add panel for side '0'
-		this.add(panel[0], get_gbc(0,0,1,1, 1,1));
-		//this.add(panel[1], get_gbc(0,0,1,1, 1,1));
+		//this.add(panel[0], get_gbc(0,0,1,1, 1,1));
+		this.add(panel[1], get_gbc(0,0,1,1, 1,1));
 		
 		this.add(panel[2], get_gbc(1,0,1,1, 0.2,1));
 		
 		// add panel for side '1'
-		this.add(panel[1], get_gbc(2,0,1,1, 1,1));
-		//this.add(panel[0], get_gbc(2,0,1,1, 1,1));
+		//this.add(panel[1], get_gbc(2,0,1,1, 1,1));
+		this.add(panel[0], get_gbc(2,0,1,1, 1,1));
 		
 	}
 	
