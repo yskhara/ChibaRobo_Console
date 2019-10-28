@@ -17,6 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -79,6 +80,15 @@ public class GameOpePanel extends JPanel implements ActionListener, ChangeListen
 				t_score[i].setFont(new Font("", Font.PLAIN, 20));
 				t_score[i].setHorizontalAlignment(JTextField.CENTER);
 				
+				if(i==0)
+				{
+					t_score[i].setBorder(new LineBorder(Color.BLUE, 3));
+				}
+				else
+				{
+					t_score[i].setBorder(new LineBorder(Color.RED, 3));
+				}
+				
 				panel[i].setLayout(new BoxLayout(panel[i], BoxLayout.Y_AXIS));
 				panel[i].add(t_score[i]);
 				for(int j = 0; j < point_list.length; j++){
@@ -91,9 +101,16 @@ public class GameOpePanel extends JPanel implements ActionListener, ChangeListen
 		}
 		
 		this.setLayout(new GridBagLayout());
+		
+		// add panel for side '0'
 		this.add(panel[0], get_gbc(0,0,1,1, 1,1));
+		//this.add(panel[1], get_gbc(0,0,1,1, 1,1));
+		
 		this.add(panel[2], get_gbc(1,0,1,1, 0.2,1));
+		
+		// add panel for side '1'
 		this.add(panel[1], get_gbc(2,0,1,1, 1,1));
+		//this.add(panel[0], get_gbc(2,0,1,1, 1,1));
 		
 	}
 	
